@@ -11,7 +11,6 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   const handleChange = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(seaarchParams);
-    console.log(term);
     params.set('page', '1');
     if (term) {
       params.set('query', term);
